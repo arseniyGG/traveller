@@ -1,0 +1,227 @@
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.user-profile-button:hover {
+    background: var(--hover-color);
+}
+
+.user-icon {
+    font-size: 1.2rem;
+}
+
+.user-name {
+    font-weight: 500;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-icon {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 280px;
+    z-index: 1000;
+}
+
+.user-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.user-list h4 {
+    margin: 0 0 8px 0;
+    padding: 0 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.user-item:hover {
+    background: var(--hover-color);
+}
+
+.user-item.active {
+    background: var(--active-color);
+    border-left: 3px solid var(--accent-color);
+}
+
+.user-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-item-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.user-item-stats {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.user-item-date {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.delete-user-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 8px;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.delete-user-btn:hover {
+    opacity: 1;
+    color: #dc3545;
+}
+
+.delete-confirm {
+    padding: 12px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.delete-confirm p {
+    margin: 4px 0;
+    color: var(--text-primary);
+}
+
+.delete-warning {
+    color: #dc3545 !important;
+    font-size: 0.85rem;
+}
+
+.delete-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.delete-actions button {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.confirm-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.confirm-delete:hover {
+    background: #c82333;
+}
+
+.cancel-delete {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color) !important;
+}
+
+.cancel-delete:hover {
+    background: var(--hover-color);
+}
+
+.create-user-form {
+    display: flex;
+    padding: 8px;
+    border-top: 1px solid var(--border-color);
+    gap: 8px;
+}
+
+.create-user-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.create-user-form button {
+    padding: 8px 12px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.create-user-form button:hover {
+    opacity: 0.9;
+}
+
+.create-user-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.user-info {
+    padding: 8px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+[data-theme="dark"] .user-dropdown {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .user-item:hover {
+    background: var(--hover-color-dark);
+}
+
+[data-theme="light"] .create-user-form button {
+    color: #333333;
+}
